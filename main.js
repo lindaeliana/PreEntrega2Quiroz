@@ -1,3 +1,6 @@
+
+//Juego interactivo de dados
+
 let dinero = 50, ganancias = 0 , apuesta = 20, numero = 0;
 
 while (dinero > 0  &&  apuesta > 0) 
