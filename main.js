@@ -1,35 +1,24 @@
+const autos = [
+    {marca: "Ford", modelo: "Mustang", precio: 54920000},
+    {marca: "Volkswagen", modelo: "Gol", precio: 4000000},
+    {marca: "Renault", modelo: "Sandero", precio: 5872000},
+    {marca: "Audi", modelo: "A3 Sedán", precio: 40000000 },
+]
 
-//Juego interactivo de dados
+let nombre = prompt("Ingrese la marca del auto a consultar");
+let producto = autos.find((item) => item.marca === nombre);
 
-let dinero = 50, ganancias = 0 , apuesta = 20, numero = 0;
+if (producto) {
+    alert ("Available")
+}else {
+    alert("not available")
+}
 
-while (dinero > 0  &&  apuesta > 0) 
-{
-    let dado = Math.floor(Math.random () * 6) + 1;
+let nombre1 = prompt("Ingrese el modelo del auto a consultar");
+let producto1 = autos.find((item) => item.modelo === nombre1);
 
-    let num = prompt("A que número quiere apostar, del 1 al 6 ", "1");
-    numero = parseInt(num);
-     
-    let cantidad = prompt("Cantidad que quiere apostar ", "20");
-    apuesta = parseInt(cantidad);
-    
-    alert(`Ha salido el numero: ${dado}`);
-
-    
-   if (numero == dado)
-   {
-    dinero = dinero + apuesta*2
-    alert (`Has ganado ${dinero}`)
-   } 
-   else {
-    dinero = dinero - apuesta
-    alert (`Has perdido ${apuesta} ahora tienes ${dinero}`)
-   } 
-   if (dinero == 0) {
-    alert ("GAME OVER")
-    break;
-   } 
-   if (dinero >= 200) {
-    alert ("HAS GANADO EL JUEGO")
-    break;
-   }}
+if (producto1) {
+alert ("Available")
+}else {
+    alert("not available")
+}
