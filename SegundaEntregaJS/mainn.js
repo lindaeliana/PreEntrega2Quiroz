@@ -6,7 +6,10 @@ const autos = [
 ]
 
 
+function descuento (numero, porcentaje){
+    return Math.abs (numero * porcentaje / 100 - numero)
+   }
 
-let encontrados = autos.filter((item) => item.precio < 6000000);
+ descuento (100,10)
 
-console.log(encontrados);
+  console.log(descuento);
