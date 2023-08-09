@@ -1,3 +1,5 @@
+//Venta de Autos
+
 const autos = [
     { marca: "Ford", modelo: "Mustang", precio: 54920000 },
     { marca: "Volkswagen", modelo: "Gol", precio: 4000000 },
@@ -8,7 +10,7 @@ const autos = [
 let nombre = prompt("Ingrese la marca del auto a consultar");
 let producto = autos.find((item) => item.marca === nombre);
 
-if (producto) {
+if (consulta.toLowerCase()) {
     let mensaje = `
     Disponible el modelo: ${producto.modelo}
     Precio: ${producto.precio}
@@ -24,10 +26,9 @@ function calcularPrecioConDescuento(precio, descuento) {
     return precioConDescuento;
 }
 
-let consulta = prompt("¿Desea realizar esta compra?");
+let consulta = prompt("Usted tiene un descuento especial... ¿Desea realizar esta compra?");
 
 if (consulta.toLowerCase() === "si") {
     let precioConDescuento = calcularPrecioConDescuento(producto.precio, 20);
-    alert(`Usted tiene un descuento especial. Precio con descuento: $${precioConDescuento}`);
+    alert(`Precio con descuento: $${precioConDescuento}`);
 }
-
