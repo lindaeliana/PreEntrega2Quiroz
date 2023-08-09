@@ -10,7 +10,7 @@ const autos = [
 let nombre = prompt("Ingrese la marca del auto a consultar");
 let producto = autos.find((item) => item.marca === nombre);
 
-if (consulta.toLowerCase()) {
+if (consulta) {
     let mensaje = `
     Disponible el modelo: ${producto.modelo}
     Precio: ${producto.precio}
